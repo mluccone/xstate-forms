@@ -1,0 +1,154 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* App specific code */
+
+main {
+  max-width: 80%;
+}
+.app {
+  padding: 24px;
+}
+iframe {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 300vh;
+}
+div.field {
+  padding: 12px;
+  line-height: 24px;
+}
+label {
+  display: inline-block;
+  min-width: 100px;
+}
+input.textInput {
+  margin-left: 20px;
+  width: 200px;
+  margin-right: 20px;
+}
+input.invisible {
+  display: none;
+}
+
+/* Highklight the dirrect field states */
+.focused {
+  border: 2px solid green;
+}
+.invalid {
+  border: 2px solid red;
+}
+.disabled {
+  border: 2px solid orange;
+}
+div.fieldError {
+  background-color: #df7116;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 12px;
+}
+
+div.buttons {
+  padding: 12px;
+  line-height: 24px;
+}
+button {
+  margin-right: 10px;
+}
+div.submitting,
+div.submitted {
+  background-color: #1b6094;
+  color: white;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+div.submitting {
+  background-color: #df7116;
+}
+div.lastEvent,
+div.stateValue {
+  margin-top: 12px;
+  border-radius: 12px;
+  font-family: monospace;
+  white-space: pre;
+}
